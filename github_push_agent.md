@@ -10,24 +10,38 @@
 - Avoid pushing to main directly
 ---
 ##🔁 git_push_agent.sh
-```bash
+%%writefile git_push_agent.sh
 #!/bin/bash
 
-# 🔁 Role/branch names
+# Define role/branch names
 branches=("architect" "developer" "qa" "ai_engineer" "devsecops" "llm_docs")
 
-# 🛠️ Create and push each branch
+# Loop through each branch and push role-specific docs
 for branch in "${branches[@]}"; do
+  echo "🌿 Creating branch: $branch"
+
+  # Create and switch to branch
   git checkout -b "$branch"
+
+  # Prepare docs folder if not present
   mkdir -p docs
-  echo "# Documentation for $branch role" > "docs/${branch}.md"
-  git add "docs/${branch}.md"
-  git commit -m "Add initial documentation for $branch role"
+
+  # Create markdown file
+  DOC_FILE="docs/${branch}.md"
+  echo "# ${branch^} Documentation" > "$DOC_FILE"
+  echo "- Created by Git Push Agent" >> "$DOC_FILE"
+  echo "- Branch: $branch" >> "$DOC_FILE"
+  echo "- Date: $(date)" >> "$DOC_FILE"
+
+  # Git operations
+  git add "$DOC_FILE"
+  git commit -m "📝 Add initial $branch documentation"
   git push -u origin "$branch"
 done
 
-# 🔁 Return to main
-- git checkout main
+# Optional: Switch back to main, but make no changes there
+git checkout main
+
 - Save it using:
 
 
