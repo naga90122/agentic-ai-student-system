@@ -56,7 +56,7 @@
 - FileStructureAgent (creates dirs/files using decorators)
 ---
 ### 📁 2. File & Directory Structure
-``bash
+```bash
 agentic-ai-student-system/
 │
 ├── agents/
