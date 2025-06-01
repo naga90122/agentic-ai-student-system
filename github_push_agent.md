@@ -9,7 +9,8 @@
 
 - Avoid pushing to main directly
 ---
-##🔁 git_push_agent.sh
+## 🔁 git_push_agent.sh
+```bash
 %%writefile git_push_agent.sh
 #!/bin/bash
 
@@ -43,12 +44,13 @@ done
 git checkout main
 
 - Save it using:
-
-
+---
+---
+```bash
 %%writefile git_push_agent.sh
 
 - and run
 ```bash
 !chmod +x git_push_agent.sh
 !./git_push_agent.sh
-
+---
