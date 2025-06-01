@@ -325,3 +325,56 @@ You can now navigate into the folder:
 !ls
 Let me know if you'd like me to auto-generate requirements.txt, pytest structure, or GitHub CI next.
 ---
+
+
+
+### Adding voice llm to above
+
+### ✅ Great — let's add 6. voice_llm_agent (text ➝ speech ➝ text ➝ speech) to your Agentic AI Student System!
+
+### Here's the updated agent roadmap with voice_llm_agent integrated:
+
+### ✅ Your Updated Agentic AI System Plan
+###	Agent / Feature	Description
+- 1	🔁 master_agent.py	Orchestrates all agents (e.g. InternetSearchAgent, VoiceLLMAgent, etc.)
+- 2	🧪 tests/test_internet_search_agent.py	Unit test for search logic
+- 3	🔗 vector_db_agent.py	Parses & stores search results in vector DB (e.g. FAISS, Chroma)
+- 4	📚 book_loader_agent.py	Loads PDFs, chunks text, sends to vector DB
+- 5	📁 Additional study agents	mcat_agent, certification_agent, devsecops_agent, etc.
+- 66	🎙️ voice_llm_agent.py	Converts LLM text ➝ voice + listens for voice ➝ text via mic/uploaded audio (simulated in Kaggle)
+
+### 🎙️ New Agent: VoiceLLMAgent
+- This agent can:
+
+### 🔊 Use Text-to-Speech (TTS) via gTTS or pyttsx3
+
+### 🎤 Simulate Speech-to-Text (STT) from audio files (in Kaggle) or mic input (locally)
+
+### 🤖 Wrap LLM responses with voice capability
+
+- We'll scaffold this agent now.
+
+### ✅ Directory Structure Update
+- We'll add this file:
+---
+```python
+agents/
+  └── voice_llm_agent/
+        ├── __init__.py
+        └── voice_llm_agent.py   <-- 🆕 This file
+- And later update:
+
+### master_agent.py to call this agent
+
+###tests/test_voice_llm_agent.py (optional)
+
+### ✅ Scaffolding voice_llm_agent.py
+- Would you like me to go ahead and:
+
+- Add the actual voice_llm_agent.py with real TTS logic?
+
+- Simulate STT from uploaded .mp3/.wav in Kaggle?
+
+- Connect it to master_agent.py?
+
+- Let me know — I can do all of the above in a few cells.
